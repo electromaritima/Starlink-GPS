@@ -1,0 +1,176 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Starlink Fleet Monitoring",
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Dashboard visual para monitoreo de flota Starlink",
+      "widgets" : {
+        "2d911e5d-0ca1-3f50-94d6-ad190f13f997" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Entities",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "pageStepCount" : 3,
+              "pageStepIncrement" : 10,
+              "defaultSortOrder" : "displayName",
+              "useRowStyleFunction" : false
+            },
+            "title" : "Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "c38e0770-2c35-11f1-b620-2ff6df252135",
+              "entityAliasId" : null,
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "device_name",
+                "type" : "timeseries",
+                "label" : "Nombre",
+                "color" : "#2196f3",
+                "settings" : { }
+              }, {
+                "name" : "dish_reachable",
+                "type" : "timeseries",
+                "label" : "dish_reachable",
+                "color" : "#4caf50",
+                "settings" : { },
+                "decimals" : 0
+              }, {
+                "name" : "starlink_raw",
+                "type" : "timeseries",
+                "label" : "starlink_raw",
+                "color" : "#4caf50",
+                "settings" : { },
+                "decimals" : 0
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showTitleIcon" : false,
+            "titleIcon" : "list",
+            "iconColor" : null,
+            "titleFont" : null,
+            "titleColor" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "2d911e5d-0ca1-3f50-94d6-ad190f13f997"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Fleet Overview",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "2d911e5d-0ca1-3f50-94d6-ad190f13f997" : {
+                  "sizeX" : 24,
+                  "sizeY" : 12,
+                  "row" : 1,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#020617",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%",
+                "autoFillHeight" : false,
+                "backgroundImageUrl" : null,
+                "mobileAutoFillHeight" : false,
+                "mobileRowHeight" : 70,
+                "outerMargin" : true,
+                "layoutType" : "default"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "d7c8c663-a36c-4171-b793-0366cb4eec05" : {
+          "id" : "d7c8c663-a36c-4171-b793-0366cb4eec05",
+          "alias" : "Selected vessel",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "00000000-0000-0000-0000-000000000000"
+            }
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000
+        },
+        "aggregation" : {
+          "type" : "AVG"
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(255,255,255,0.92)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
+      }
+    },
+    "name" : "Starlink Fleet Monitoring",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "7cfc9ae0-2845-11f1-b620-2ff6df252135"
+    }
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
