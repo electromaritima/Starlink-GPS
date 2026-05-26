@@ -56,6 +56,13 @@
                 "label" : "",
                 "color" : "#2196f3",
                 "settings" : { }
+              }, {
+                "name" : "Valor",
+                "type" : "entityField",
+                "label" : "",
+                "color" : "#4caf50",
+                "settings" : { },
+                "decimals" : 0
               } ],
               "alarmFilterConfig" : {
                 "statusList" : [ "ACTIVE" ]
@@ -82,8 +89,8 @@
             "main" : {
               "widgets" : {
                 "c786a104-f3bc-09a0-4f2e-2b816a06bfc6" : {
-                  "sizeX" : 7,
-                  "sizeY" : 6,
+                  "sizeX" : 20,
+                  "sizeY" : 9,
                   "row" : 0,
                   "col" : 0
                 }
