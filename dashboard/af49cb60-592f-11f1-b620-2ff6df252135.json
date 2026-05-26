@@ -53,13 +53,13 @@
               "dataKeys" : [ {
                 "name" : "displayName",
                 "type" : "entityField",
-                "label" : "",
+                "label" : "NMEA 0183",
                 "color" : "#2196f3",
                 "settings" : { }
               }, {
                 "name" : "Valor",
                 "type" : "entityField",
-                "label" : "",
+                "label" : "Mensaje",
                 "color" : "#4caf50",
                 "settings" : { },
                 "decimals" : 0
