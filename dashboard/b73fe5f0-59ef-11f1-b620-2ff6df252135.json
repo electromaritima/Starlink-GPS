@@ -1,0 +1,165 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Electromarítima - NMEA 0183",
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Recepción y visualización de datos NMEA 0183 - Electromarítima Uruguaya S.R.L.",
+      "widgets" : {
+        "c786a104-f3bc-09a0-4f2e-2b816a06bfc6" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 24,
+          "sizeY" : 14,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "#ffffff",
+            "color" : "rgba(10, 31, 68, 0.92)",
+            "padding" : "14px",
+            "settings" : {
+              "entitiesTitle" : "Datos recibidos",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "pageStepCount" : 3,
+              "pageStepIncrement" : 10,
+              "defaultSortOrder" : "displayName",
+              "useRowStyleFunction" : true,
+              "rowStyleFunction" : "return {'font-size': '14px', 'border-bottom': '1px solid rgba(11,61,145,0.08)'};"
+            },
+            "title" : "⚓  Electromarítima Uruguaya S.R.L.  |  Recepción NMEA 0183",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "20px",
+              "fontWeight" : 600,
+              "padding" : "10px 14px 8px 14px",
+              "letterSpacing" : "0.2px"
+            },
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "Equipo NMEA 0183",
+              "deviceId" : "87c27880-592f-11f1-b620-2ff6df252135",
+              "entityAliasId" : null,
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "displayName",
+                "type" : "entityField",
+                "label" : "Equipo",
+                "color" : "#0b3d91",
+                "settings" : {
+                  "columnWidth" : "30%"
+                }
+              }, {
+                "name" : "Valor",
+                "type" : "timeseries",
+                "label" : "Valor recibido",
+                "color" : "#00a0df",
+                "settings" : {
+                  "columnWidth" : "70%"
+                },
+                "decimals" : 0
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showTitleIcon" : true,
+            "titleIcon" : "directions_boat",
+            "iconColor" : "#0b3d91",
+            "titleFont" : null,
+            "titleColor" : "#0b3d91"
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "c786a104-f3bc-09a0-4f2e-2b816a06bfc6"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Electromarítima - NMEA 0183",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "c786a104-f3bc-09a0-4f2e-2b816a06bfc6" : {
+                  "sizeX" : 24,
+                  "sizeY" : 14,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#f4f7fb",
+                "columns" : 24,
+                "margin" : 14,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "c2bc1066-9be1-b23a-576b-ff165f4d7c66" : {
+          "id" : "c2bc1066-9be1-b23a-576b-ff165f4d7c66",
+          "alias" : "Equipo NMEA 0183",
+          "filter" : {
+            "type" : "singleEntity",
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "87c27880-592f-11f1-b620-2ff6df252135"
+            },
+            "resolveMultiple" : false
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "timewindowMs" : 3600000
+        },
+        "aggregation" : {
+          "type" : "NONE",
+          "limit" : 5000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : true,
+        "showDashboardsSelect" : false,
+        "showEntitiesSelect" : false,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "name" : "Electromarítima - NMEA 0183",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "b73fe5f0-59ef-11f1-b620-2ff6df252135"
+    }
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
