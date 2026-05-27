@@ -58,9 +58,9 @@
                 "settings" : { }
               }, {
                 "name" : "Valor",
-                "type" : "entityField",
-                "label" : "Mensaje",
-                "color" : "#4caf50",
+                "type" : "timeseries",
+                "label" : "Valor",
+                "color" : "#f44336",
                 "settings" : { },
                 "decimals" : 0
               } ],
@@ -79,99 +79,6 @@
           "row" : 0,
           "col" : 0,
           "id" : "c786a104-f3bc-09a0-4f2e-2b816a06bfc6"
-        },
-        "33c0c73a-f7ba-4852-71a6-2e5c2ac15259" : {
-          "typeFullFqn" : "system.cards.timeseries_table",
-          "type" : "timeseries",
-          "sizeX" : 16,
-          "sizeY" : 13,
-          "row" : 0,
-          "col" : 2,
-          "config" : {
-            "datasources" : [ {
-              "type" : "entity",
-              "entityAliasId" : "c2bc1066-9be1-b23a-576b-ff165f4d7c66",
-              "dataKeys" : [ {
-                "name" : "Valor",
-                "label" : "Valor",
-                "type" : "timeseries",
-                "color" : "#2196f3",
-                "settings" : { }
-              } ]
-            } ],
-            "showTitle" : true,
-            "backgroundColor" : "rgb(255, 255, 255)",
-            "color" : "rgba(0, 0, 0, 0.87)",
-            "padding" : "8px",
-            "settings" : {
-              "enableSearch" : true,
-              "enableSelectColumnDisplay" : true,
-              "enableStickyHeader" : true,
-              "enableStickyAction" : true,
-              "showCellActionsMenu" : true,
-              "reserveSpaceForHiddenAction" : "true",
-              "showTimestamp" : true,
-              "dateFormat" : {
-                "format" : "yyyy-MM-dd HH:mm:ss"
-              },
-              "displayPagination" : true,
-              "useEntityLabel" : false,
-              "defaultPageSize" : 10,
-              "pageStepCount" : 3,
-              "pageStepIncrement" : 10,
-              "hideEmptyLines" : false,
-              "disableStickyHeader" : false,
-              "useRowStyleFunction" : false,
-              "rowStyleFunction" : "",
-              "sortOrder" : {
-                "property" : "createdTime",
-                "direction" : "DESC"
-              }
-            },
-            "title" : "Time series table",
-            "dropShadow" : true,
-            "enableFullscreen" : true,
-            "titleStyle" : {
-              "fontSize" : "16px",
-              "fontWeight" : 400,
-              "padding" : "5px 10px 5px 10px"
-            },
-            "useDashboardTimewindow" : false,
-            "showLegend" : false,
-            "widgetStyle" : { },
-            "actions" : { },
-            "showTitleIcon" : false,
-            "iconColor" : "rgba(0, 0, 0, 0.87)",
-            "iconSize" : "24px",
-            "configMode" : "basic",
-            "titleFont" : null,
-            "titleColor" : null,
-            "titleIcon" : null,
-            "timewindow" : {
-              "selectedTab" : 0,
-              "realtime" : {
-                "realtimeType" : 0,
-                "interval" : 60000,
-                "timewindowMs" : 3600000,
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "history" : {
-                "historyType" : 0,
-                "interval" : 60000,
-                "timewindowMs" : 3600000,
-                "fixedTimewindow" : {
-                  "startTimeMs" : 1779814194550,
-                  "endTimeMs" : 1779900594550
-                },
-                "quickInterval" : "CURRENT_DAY"
-              },
-              "aggregation" : {
-                "type" : "NONE",
-                "limit" : 2500
-              }
-            }
-          },
-          "id" : "33c0c73a-f7ba-4852-71a6-2e5c2ac15259"
         }
       },
       "states" : {
@@ -185,12 +92,6 @@
                   "sizeX" : 20,
                   "sizeY" : 9,
                   "row" : 0,
-                  "col" : 0
-                },
-                "33c0c73a-f7ba-4852-71a6-2e5c2ac15259" : {
-                  "sizeX" : 8,
-                  "sizeY" : 6,
-                  "row" : 9,
                   "col" : 0
                 }
               },
