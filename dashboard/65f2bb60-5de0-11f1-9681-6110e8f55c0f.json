@@ -203,7 +203,7 @@
               "onUpdateState" : {
                 "action" : "EXECUTE_RPC",
                 "executeRpc" : {
-                  "method" : "pausarRecepcion",
+                  "method" : "reanudarRecepcion",
                   "requestTimeout" : 5000,
                   "requestPersistent" : false,
                   "persistentPollingInterval" : 1000
@@ -224,7 +224,7 @@
               "offUpdateState" : {
                 "action" : "EXECUTE_RPC",
                 "executeRpc" : {
-                  "method" : "reanudarRecepcion",
+                  "method" : "pausarRecepcion",
                   "requestTimeout" : 5000,
                   "requestPersistent" : false,
                   "persistentPollingInterval" : 1000
