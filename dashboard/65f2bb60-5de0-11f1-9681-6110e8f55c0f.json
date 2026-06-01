@@ -346,13 +346,13 @@
               "widgets" : {
                 "df2222d4-98af-4195-b682-c2a1ce030a37" : {
                   "sizeX" : 8,
-                  "sizeY" : 8,
+                  "sizeY" : 4,
                   "row" : 0,
                   "col" : 0
                 },
                 "d89ac00a-3269-43d2-b606-43b468e82325" : {
                   "sizeX" : 16,
-                  "sizeY" : 14,
+                  "sizeY" : 11,
                   "row" : 0,
                   "col" : 8
                 },
