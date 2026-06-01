@@ -346,7 +346,7 @@
               "widgets" : {
                 "df2222d4-98af-4195-b682-c2a1ce030a37" : {
                   "sizeX" : 8,
-                  "sizeY" : 4,
+                  "sizeY" : 5,
                   "row" : 0,
                   "col" : 0
                 },
@@ -359,7 +359,7 @@
                 "aefec441-762b-472b-4f37-bcb68373b641" : {
                   "sizeX" : 8,
                   "sizeY" : 6,
-                  "row" : 8,
+                  "row" : 5,
                   "col" : 0,
                   "resizable" : true,
                   "preserveAspectRatio" : true
