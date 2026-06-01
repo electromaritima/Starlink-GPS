@@ -289,7 +289,7 @@
                 "showIcon" : true,
                 "iconSize" : 10000,
                 "iconSizeUnit" : "px",
-                "icon" : "power_settings_new"
+                "icon" : "arrow_downward"
               },
               "offButtonIcon" : {
                 "showIcon" : true,
