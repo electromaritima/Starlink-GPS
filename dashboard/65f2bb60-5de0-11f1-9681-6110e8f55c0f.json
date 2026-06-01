@@ -184,8 +184,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "getAttribute" : {
-                  "scope" : null,
-                  "key" : "state"
+                  "key" : "state",
+                  "scope" : null
                 },
                 "getTimeSeries" : {
                   "key" : "state"
@@ -196,8 +196,8 @@
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : true
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
                 }
               },
               "onUpdateState" : {
@@ -209,8 +209,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SERVER_SCOPE",
-                  "key" : "state"
+                  "key" : "state",
+                  "scope" : "SERVER_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -230,8 +230,8 @@
                   "persistentPollingInterval" : 1000
                 },
                 "setAttribute" : {
-                  "scope" : "SERVER_SCOPE",
-                  "key" : "state"
+                  "key" : "state",
+                  "scope" : "SERVER_SCOPE"
                 },
                 "putTimeSeries" : {
                   "key" : "state"
@@ -245,15 +245,9 @@
               "disabledState" : {
                 "action" : "DO_NOTHING",
                 "defaultValue" : false,
-                "executeRpc" : {
-                  "method" : null,
-                  "requestTimeout" : null,
-                  "requestPersistent" : null,
-                  "persistentPollingInterval" : null
-                },
                 "getAttribute" : {
-                  "scope" : null,
-                  "key" : "state"
+                  "key" : "state",
+                  "scope" : null
                 },
                 "getTimeSeries" : {
                   "key" : "state"
@@ -264,23 +258,17 @@
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
-                  "compareToValue" : true
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                },
+                "executeRpc" : {
+                  "method" : null,
+                  "requestTimeout" : null,
+                  "requestPersistent" : null,
+                  "persistentPollingInterval" : null
                 }
               },
               "layout" : "default",
-              "onButtonIcon" : {
-                "showIcon" : false,
-                "iconSize" : 32,
-                "iconSizeUnit" : "px",
-                "icon" : "power_settings_new"
-              },
-              "offButtonIcon" : {
-                "showIcon" : false,
-                "iconSize" : 32,
-                "iconSizeUnit" : "px",
-                "icon" : "power_settings_new"
-              },
               "mainColorOn" : "#55BF5A",
               "backgroundColorOn" : "#DDF6BE",
               "mainColorOff" : "#E1584E",
@@ -296,9 +284,21 @@
                   "blur" : 3
                 }
               },
-              "padding" : "12px"
+              "padding" : "9px",
+              "onButtonIcon" : {
+                "showIcon" : true,
+                "iconSize" : 32,
+                "iconSizeUnit" : "px",
+                "icon" : "power_settings_new"
+              },
+              "offButtonIcon" : {
+                "showIcon" : true,
+                "iconSize" : 32,
+                "iconSizeUnit" : "px",
+                "icon" : "power_settings_new"
+              }
             },
-            "title" : "Power",
+            "title" : "Pausar Datos",
             "dropShadow" : true,
             "enableFullscreen" : false,
             "widgetStyle" : { },
@@ -360,7 +360,9 @@
                   "sizeX" : 8,
                   "sizeY" : 6,
                   "row" : 8,
-                  "col" : 0
+                  "col" : 0,
+                  "resizable" : true,
+                  "preserveAspectRatio" : true
                 }
               },
               "gridSettings" : {
