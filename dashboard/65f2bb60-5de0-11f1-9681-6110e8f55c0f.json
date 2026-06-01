@@ -244,7 +244,7 @@
               },
               "disabledState" : {
                 "action" : "DO_NOTHING",
-                "defaultValue" : true,
+                "defaultValue" : false,
                 "executeRpc" : {
                   "method" : null,
                   "requestTimeout" : null,
