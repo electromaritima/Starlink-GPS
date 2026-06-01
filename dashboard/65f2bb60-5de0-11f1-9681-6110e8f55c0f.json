@@ -281,10 +281,10 @@
                 "iconSizeUnit" : "px",
                 "icon" : "power_settings_new"
               },
-              "mainColorOn" : "#3F52DD",
-              "backgroundColorOn" : "#FFFFFF",
-              "mainColorOff" : "#A2A2A2",
-              "backgroundColorOff" : "#FFFFFF",
+              "mainColorOn" : "#55BF5A",
+              "backgroundColorOn" : "#DDF6BE",
+              "mainColorOff" : "#E1584E",
+              "backgroundColorOff" : "#FAA6A6",
               "mainColorDisabled" : "rgba(0,0,0,0.12)",
               "backgroundColorDisabled" : "#FFFFFF",
               "background" : {
