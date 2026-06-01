@@ -1,0 +1,232 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "title" : "Electromarítima - NMEA 0183",
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "configuration" : {
+      "description" : "Recepción y visualización de datos NMEA 0183 - Electromarítima Uruguaya S.R.L.",
+      "widgets" : {
+        "widget-nmea-queue" : {
+          "typeFullFqn" : "system.html_card",
+          "type" : "latest",
+          "sizeX" : 24,
+          "sizeY" : 20,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "#0a1628",
+            "color" : "#e8f4fd",
+            "padding" : "0px",
+            "title" : "⚓  Electromarítima Uruguaya S.R.L.  |  Monitor NMEA 0183",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "18px",
+              "fontWeight" : 700,
+              "padding" : "14px 20px 10px 20px",
+              "letterSpacing" : "0.5px",
+              "color" : "#ffffff",
+              "background" : "linear-gradient(90deg, #0b3d91 0%, #0a1e4a 100%)",
+              "borderBottom" : "2px solid #00a0df"
+            },
+            "showTitleIcon" : true,
+            "titleIcon" : "directions_boat",
+            "iconColor" : "#00a0df",
+            "settings" : {
+              "htmlTemplate" : "<!DOCTYPE html><html><head><style>*{box-sizing:border-box;margin:0;padding:0}body{background:#0a1628;font-family:'Courier New',monospace;color:#e8f4fd;height:100%;overflow:hidden}.container{padding:16px;height:100%}.header-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(0,160,223,0.3)}.header-bar .label{font-size:11px;color:#00a0df;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}.header-bar .status{display:flex;align-items:center;gap:6px;font-size:11px;color:#4ade80}.status-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse 1.5s infinite}.header-bar .count{font-size:11px;color:rgba(232,244,253,0.5)}.cols{display:grid;grid-template-columns:40px 160px 1fr 90px;gap:0;font-size:10px;color:#00a0df;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-bottom:1px solid rgba(0,160,223,0.2);margin-bottom:4px}.queue-list{display:flex;flex-direction:column;gap:3px}.queue-item{display:grid;grid-template-columns:40px 160px 1fr 90px;align-items:center;padding:8px 12px;border-radius:6px;border-left:3px solid transparent;transition:all 0.3s ease;animation:slideIn 0.4s ease}.queue-item:nth-child(1){background:rgba(0,160,223,0.18);border-left-color:#00a0df}.queue-item:nth-child(2){background:rgba(0,160,223,0.13);border-left-color:rgba(0,160,223,0.7)}.queue-item:nth-child(3){background:rgba(0,160,223,0.09);border-left-color:rgba(0,160,223,0.5)}.queue-item:nth-child(n+4){background:rgba(255,255,255,0.04);border-left-color:rgba(0,160,223,0.2)}.queue-item .idx{font-size:11px;color:rgba(0,160,223,0.6);font-weight:700}.queue-item .ts{font-size:10px;color:rgba(232,244,253,0.5);letter-spacing:0.3px}.queue-item .val{font-size:12px;color:#e8f4fd;letter-spacing:0.5px;word-break:break-all;padding-right:8px}.queue-item .type-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center}.badge-gp{background:rgba(74,222,128,0.15);color:#4ade80;border:1px solid rgba(74,222,128,0.3)}.badge-ii{background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.3)}.badge-ai{background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3)}.badge-un{background:rgba(148,163,184,0.15);color:#94a3b8;border:1px solid rgba(148,163,184,0.3)}.empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;gap:10px;color:rgba(232,244,253,0.3)}.empty-state .icon{font-size:40px}.empty-state .text{font-size:12px;letter-spacing:1px;text-transform:uppercase}.footer{margin-top:10px;padding-top:8px;border-top:1px solid rgba(0,160,223,0.2);display:flex;justify-content:space-between;font-size:10px;color:rgba(232,244,253,0.35);letter-spacing:0.5px}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}</style></head><body><div class='container'><div class='header-bar'><span class='label'>📡 Cola de mensajes NMEA</span><div style='display:flex;align-items:center;gap:16px'><span class='count' id='countLabel'>0 / 10 mensajes</span><div class='status'><div class='status-dot'></div><span>EN VIVO</span></div></div></div><div class='cols'><span>#</span><span>Timestamp</span><span>Trama NMEA</span><span>Tipo</span></div><div class='queue-list' id='queueList'><div class='empty-state'><div class='icon'>🛰️</div><div class='text'>Esperando datos NMEA...</div></div></div><div class='footer'><span>Electromarítima Uruguaya S.R.L.</span><span>NMEA 0183 — Cola FIFO máx. 10</span><span id='lastUpdate'>—</span></div></div><script>var queue=[];var MAX=10;function getBadge(val){if(!val)return\"<span class='type-badge badge-un'>???</span>\";var t=val.substring(1,3).toUpperCase();if(t==='GP'||t==='GN'||t==='GL')return\"<span class='type-badge badge-gp'>\"+t+\"</span>\";if(t==='II')return\"<span class='type-badge badge-ii'>II</span>\";if(t==='AI')return\"<span class='type-badge badge-ai'>AI</span>\";return\"<span class='type-badge badge-un'>\"+t+\"</span>\";}function formatTs(ts){var d=new Date(ts);return d.toLocaleDateString('es-UY',{day:'2-digit',month:'2-digit'})+' '+d.toLocaleTimeString('es-UY',{hour:'2-digit',minute:'2-digit',second:'2-digit'});}function render(){var list=document.getElementById('queueList');var count=document.getElementById('countLabel');var lu=document.getElementById('lastUpdate');if(queue.length===0){list.innerHTML=\"<div class='empty-state'><div class='icon'>🛰️</div><div class='text'>Esperando datos NMEA...</div></div>\";count.textContent='0 / 10 mensajes';return;}var html='';for(var i=0;i<queue.length;i++){var item=queue[i];html+=\"<div class='queue-item'><span class='idx'>\"+(i+1)+\"</span><span class='ts'>\"+formatTs(item.ts)+\"</span><span class='val'>\"+item.val+\"</span>\"+getBadge(item.val)+\"</div>\";}list.innerHTML=html;count.textContent=queue.length+' / 10 mensajes';lu.textContent='Actualizado: '+new Date().toLocaleTimeString('es-UY');}function addMessage(val,ts){queue.unshift({val:val,ts:ts||Date.now()});if(queue.length>MAX)queue=queue.slice(0,MAX);render();}self.onDataUpdated=function(){try{var ctx=self.ctx;var data=ctx.defaultSubscription.data;if(data&&data.length>0){var d=data[0];if(d.data&&d.data.length>0){var newest=d.data[d.data.length-1];var val=newest[1];var ts=newest[0];if(queue.length===0||queue[0].val!==val){addMessage(val,ts);}}}}catch(e){console.error('NMEA widget error:',e);}};</script></body></html>",
+              "useCustomStyle" : true
+            },
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "Equipo NMEA 0183",
+              "deviceId" : "87c27880-592f-11f1-b620-2ff6df252135",
+              "entityAliasId" : null,
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "Valor",
+                "type" : "timeseries",
+                "label" : "Valor recibido",
+                "color" : "#00a0df",
+                "settings" : { },
+                "decimals" : 0
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showLegend" : false
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "widget-nmea-queue"
+        },
+        "widget-stats" : {
+          "typeFullFqn" : "system.html_card",
+          "type" : "latest",
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "showTitle" : false,
+            "backgroundColor" : "#0a1628",
+            "padding" : "0px",
+            "settings" : {
+              "htmlTemplate" : "<!DOCTYPE html><html><head><style>*{box-sizing:border-box;margin:0;padding:0}body{background:linear-gradient(135deg,#0b3d91 0%,#0a1e4a 100%);font-family:'Courier New',monospace;color:#fff;height:100%;display:flex;align-items:center;justify-content:center}.card{text-align:center;padding:20px}.icon{font-size:36px;margin-bottom:8px}.label{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:6px}.value{font-size:28px;font-weight:700;color:#00a0df}.sub{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.5px}</style></head><body><div class='card'><div class='icon'>📡</div><div class='label'>Protocolo</div><div class='value'>NMEA 0183</div><div class='sub'>4800 / 9600 baud — 8N1</div></div></body></html>",
+              "useCustomStyle" : true
+            },
+            "datasources" : [ ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showLegend" : false,
+            "dropShadow" : true,
+            "enableFullscreen" : false
+          },
+          "row" : 20,
+          "col" : 0,
+          "id" : "widget-stats"
+        },
+        "widget-device" : {
+          "typeFullFqn" : "system.html_card",
+          "type" : "latest",
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "showTitle" : false,
+            "backgroundColor" : "#0a1628",
+            "padding" : "0px",
+            "settings" : {
+              "htmlTemplate" : "<!DOCTYPE html><html><head><style>*{box-sizing:border-box;margin:0;padding:0}body{background:linear-gradient(135deg,#064e3b 0%,#0a1e2e 100%);font-family:'Courier New',monospace;color:#fff;height:100%;display:flex;align-items:center;justify-content:center}.card{text-align:center;padding:20px}.icon{font-size:36px;margin-bottom:8px}.label{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:6px}.value{font-size:22px;font-weight:700;color:#4ade80}.sub{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.5px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ade80;margin-right:6px;animation:pulse 1.5s infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}</style></head><body><div class='card'><div class='icon'>🔌</div><div class='label'>Dispositivo</div><div class='value'><span class='dot'></span>ESP32 RX GPIO26</div><div class='sub'>Conversor RS422 → TTL activo</div></div></body></html>",
+              "useCustomStyle" : true
+            },
+            "datasources" : [ ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showLegend" : false,
+            "dropShadow" : true,
+            "enableFullscreen" : false
+          },
+          "row" : 20,
+          "col" : 8,
+          "id" : "widget-device"
+        },
+        "widget-empresa" : {
+          "typeFullFqn" : "system.html_card",
+          "type" : "latest",
+          "sizeX" : 8,
+          "sizeY" : 6,
+          "config" : {
+            "showTitle" : false,
+            "backgroundColor" : "#0a1628",
+            "padding" : "0px",
+            "settings" : {
+              "htmlTemplate" : "<!DOCTYPE html><html><head><style>*{box-sizing:border-box;margin:0;padding:0}body{background:linear-gradient(135deg,#1e1b4b 0%,#0a1e4a 100%);font-family:'Courier New',monospace;color:#fff;height:100%;display:flex;align-items:center;justify-content:center}.card{text-align:center;padding:20px}.icon{font-size:36px;margin-bottom:8px}.label{font-size:10px;letter-spacing:2px;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:6px}.value{font-size:16px;font-weight:700;color:#a78bfa;line-height:1.4}.sub{font-size:10px;color:rgba(255,255,255,0.4);margin-top:4px;letter-spacing:0.5px}</style></head><body><div class='card'><div class='icon'>⚓</div><div class='label'>Empresa</div><div class='value'>Electromarítima<br>Uruguaya S.R.L.</div><div class='sub'>Sistema de monitoreo NMEA</div></div></body></html>",
+              "useCustomStyle" : true
+            },
+            "datasources" : [ ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showLegend" : false,
+            "dropShadow" : true,
+            "enableFullscreen" : false
+          },
+          "row" : 20,
+          "col" : 16,
+          "id" : "widget-empresa"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "Electromarítima - NMEA 0183",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "widget-nmea-queue" : {
+                  "sizeX" : 24,
+                  "sizeY" : 20,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "widget-stats" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 20,
+                  "col" : 0
+                },
+                "widget-device" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 20,
+                  "col" : 8
+                },
+                "widget-empresa" : {
+                  "sizeX" : 8,
+                  "sizeY" : 6,
+                  "row" : 20,
+                  "col" : 16
+                }
+              },
+              "gridSettings" : {
+                "layoutType" : "default",
+                "backgroundColor" : "#060e1f",
+                "columns" : 24,
+                "margin" : 12,
+                "outerMargin" : true,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "c2bc1066-9be1-b23a-576b-ff165f4d7c66" : {
+          "id" : "c2bc1066-9be1-b23a-576b-ff165f4d7c66",
+          "alias" : "Equipo NMEA 0183",
+          "filter" : {
+            "type" : "singleEntity",
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "87c27880-592f-11f1-b620-2ff6df252135"
+            },
+            "resolveMultiple" : false
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "timewindowMs" : 3600000
+        },
+        "aggregation" : {
+          "type" : "NONE",
+          "limit" : 5000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : false,
+        "showEntitiesSelect" : false,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : false
+      }
+    },
+    "name" : "Electromarítima - NMEA 0183",
+    "resources" : null,
+    "assignedCustomers" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "3bc40bb0-5ddf-11f1-9681-6110e8f55c0f"
+    }
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ ]
+}
