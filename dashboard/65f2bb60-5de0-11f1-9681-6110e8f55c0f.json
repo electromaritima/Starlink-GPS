@@ -272,7 +272,7 @@
               "mainColorOn" : "#55BF5A",
               "backgroundColorOn" : "#DDF6BE",
               "mainColorOff" : "#E1584E",
-              "backgroundColorOff" : "#FAA6A6",
+              "backgroundColorOff" : "#F9A19B",
               "mainColorDisabled" : "rgba(0,0,0,0.12)",
               "backgroundColorDisabled" : "#FFFFFF",
               "background" : {
@@ -287,7 +287,7 @@
               "padding" : "9px",
               "onButtonIcon" : {
                 "showIcon" : true,
-                "iconSize" : 32,
+                "iconSize" : 10000,
                 "iconSizeUnit" : "px",
                 "icon" : "power_settings_new"
               },
