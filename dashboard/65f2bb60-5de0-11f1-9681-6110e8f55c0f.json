@@ -178,7 +178,7 @@
                 "action" : "EXECUTE_RPC",
                 "defaultValue" : false,
                 "executeRpc" : {
-                  "method" : "recepcion_activa",
+                  "method" : "pausarRecepcion",
                   "requestTimeout" : 5000,
                   "requestPersistent" : false,
                   "persistentPollingInterval" : 1000
@@ -203,7 +203,7 @@
               "onUpdateState" : {
                 "action" : "EXECUTE_RPC",
                 "executeRpc" : {
-                  "method" : "recepcion_activa",
+                  "method" : "pausarRecepcion",
                   "requestTimeout" : 5000,
                   "requestPersistent" : false,
                   "persistentPollingInterval" : 1000
@@ -224,7 +224,7 @@
               "offUpdateState" : {
                 "action" : "EXECUTE_RPC",
                 "executeRpc" : {
-                  "method" : "recepcion_activa",
+                  "method" : "reanudarRecepcion",
                   "requestTimeout" : 5000,
                   "requestPersistent" : false,
                   "persistentPollingInterval" : 1000
@@ -238,16 +238,22 @@
                 },
                 "valueToData" : {
                   "type" : "CONSTANT",
-                  "constantValue" : false,
+                  "constantValue" : true,
                   "valueToDataFunction" : "/* Convert input boolean value to RPC parameters or attribute/time-series value */ \n return value;"
                 }
               },
               "disabledState" : {
                 "action" : "DO_NOTHING",
-                "defaultValue" : false,
+                "defaultValue" : true,
+                "executeRpc" : {
+                  "method" : null,
+                  "requestTimeout" : null,
+                  "requestPersistent" : null,
+                  "persistentPollingInterval" : null
+                },
                 "getAttribute" : {
-                  "key" : "state",
-                  "scope" : null
+                  "scope" : null,
+                  "key" : "state"
                 },
                 "getTimeSeries" : {
                   "key" : "state"
@@ -258,8 +264,8 @@
                 },
                 "dataToValue" : {
                   "type" : "NONE",
-                  "compareToValue" : true,
-                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;",
+                  "compareToValue" : true
                 }
               },
               "layout" : "default",
