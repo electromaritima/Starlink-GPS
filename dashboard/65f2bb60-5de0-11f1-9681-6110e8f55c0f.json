@@ -904,16 +904,16 @@
             "main" : {
               "widgets" : {
                 "ee73bb66-00df-2b00-c28a-9044f11b69db" : {
-                  "sizeX" : 3,
-                  "sizeY" : 1,
+                  "sizeX" : 12,
+                  "sizeY" : 4,
                   "row" : 0,
                   "col" : 0
                 },
                 "344abd4c-45ff-df7a-03e0-e1d00b131ee7" : {
-                  "sizeX" : 3,
-                  "sizeY" : 1,
-                  "row" : 1,
-                  "col" : 0
+                  "sizeX" : 12,
+                  "sizeY" : 4,
+                  "row" : 0,
+                  "col" : 12
                 }
               },
               "gridSettings" : {
