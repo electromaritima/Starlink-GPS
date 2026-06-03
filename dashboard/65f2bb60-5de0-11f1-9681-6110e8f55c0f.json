@@ -937,16 +937,16 @@
             "main" : {
               "widgets" : {
                 "ee73bb66-00df-2b00-c28a-9044f11b69db" : {
-                  "sizeX" : 10,
+                  "sizeX" : 11,
                   "sizeY" : 3,
                   "row" : 2,
                   "col" : 1
                 },
                 "344abd4c-45ff-df7a-03e0-e1d00b131ee7" : {
-                  "sizeX" : 10,
+                  "sizeX" : 11,
                   "sizeY" : 3,
                   "row" : 2,
-                  "col" : 13
+                  "col" : 12
                 },
                 "b4a6f896-2387-6fc6-d028-58f5980fd5fb" : {
                   "sizeX" : 22,
