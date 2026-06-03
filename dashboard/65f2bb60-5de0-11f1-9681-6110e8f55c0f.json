@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Electromaritima Nube",
+    "title" : "EMU Nube",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -850,6 +850,39 @@
           "row" : 0,
           "col" : 0,
           "id" : "4e5943e8-7d4d-be68-bc53-d480dc609156"
+        },
+        "b4a6f896-2387-6fc6-d028-58f5980fd5fb" : {
+          "typeFullFqn" : "system.cards.html_card",
+          "type" : "static",
+          "sizeX" : 7.5,
+          "sizeY" : 3,
+          "config" : {
+            "datasources" : [ {
+              "type" : "static",
+              "name" : "function",
+              "dataKeys" : [ {
+                "name" : "f(x)",
+                "type" : "function",
+                "label" : "Random",
+                "color" : "#2196f3",
+                "settings" : { },
+                "funcBody" : "var value = prevValue + Math.random() * 100 - 50;\nvar multiplier = Math.pow(10, 2 || 0);\nvar value = Math.round(value * multiplier) / multiplier;\nif (value < -1000) {\n\tvalue = -1000;\n} else if (value > 1000) {\n\tvalue = 1000;\n}\nreturn value;"
+              } ]
+            } ],
+            "showTitle" : false,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "8px",
+            "settings" : {
+              "cardHtml" : "<div class='card'>Electromaritima Nube</div>",
+              "cardCss" : ".card {\n    font-weight: bold;\n    font-size: 32px;\n    color: #999;\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}"
+            },
+            "title" : "HTML Card",
+            "dropShadow" : true
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "b4a6f896-2387-6fc6-d028-58f5980fd5fb"
         }
       },
       "states" : {
@@ -906,14 +939,20 @@
                 "ee73bb66-00df-2b00-c28a-9044f11b69db" : {
                   "sizeX" : 10,
                   "sizeY" : 3,
-                  "row" : 2,
+                  "row" : 3,
                   "col" : 1
                 },
                 "344abd4c-45ff-df7a-03e0-e1d00b131ee7" : {
                   "sizeX" : 10,
                   "sizeY" : 3,
-                  "row" : 2,
+                  "row" : 3,
                   "col" : 13
+                },
+                "b4a6f896-2387-6fc6-d028-58f5980fd5fb" : {
+                  "sizeX" : 22,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 1
                 }
               },
               "gridSettings" : {
@@ -994,7 +1033,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Electromaritima Nube",
+    "name" : "EMU Nube",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
