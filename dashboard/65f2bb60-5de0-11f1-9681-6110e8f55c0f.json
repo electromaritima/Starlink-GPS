@@ -796,15 +796,15 @@
               },
               "appearance" : {
                 "type" : "outlined",
-                "autoScale" : true,
                 "showLabel" : true,
-                "label" : "Button",
+                "label" : "Inicio",
                 "showIcon" : true,
-                "icon" : "home",
+                "icon" : "directions_boat",
                 "iconSize" : 24,
                 "iconSizeUnit" : "px",
-                "mainColor" : "#3F52DD",
+                "mainColor" : "#A1ADB1",
                 "backgroundColor" : "#FFFFFF",
+                "autoScale" : true,
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
@@ -940,8 +940,8 @@
                   "col" : 0
                 },
                 "4e5943e8-7d4d-be68-bc53-d480dc609156" : {
-                  "sizeX" : 3,
-                  "sizeY" : 1,
+                  "sizeX" : 24,
+                  "sizeY" : 3,
                   "row" : 10,
                   "col" : 0
                 }
