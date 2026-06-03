@@ -2,7 +2,7 @@
   "entityType" : "DASHBOARD",
   "entity" : {
     "title" : "EMU Nube",
-    "image" : null,
+    "image" : "tb-image;/api/images/tenant/flota_starlink_diseño_base_dashboard_widget_mapa_de_referencia_marker_image_0.png",
     "mobileHide" : false,
     "mobileOrder" : null,
     "configuration" : {
