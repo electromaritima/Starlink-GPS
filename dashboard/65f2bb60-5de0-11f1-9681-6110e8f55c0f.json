@@ -390,15 +390,15 @@
               },
               "appearance" : {
                 "type" : "outlined",
-                "autoScale" : true,
                 "showLabel" : true,
-                "label" : "Button",
+                "label" : "NMEA 0183",
                 "showIcon" : true,
-                "icon" : "home",
+                "icon" : "share",
                 "iconSize" : 24,
                 "iconSizeUnit" : "px",
-                "mainColor" : "#3F52DD",
-                "backgroundColor" : "#FFFFFF",
+                "mainColor" : "#6F113A",
+                "backgroundColor" : "#BC91A4",
+                "autoScale" : true,
                 "customStyle" : {
                   "enabled" : null,
                   "hovered" : null,
@@ -611,11 +611,11 @@
                 "showLabel" : true,
                 "label" : "starlink",
                 "showIcon" : true,
-                "icon" : "home",
+                "icon" : "satellite_alt",
                 "iconSize" : 24,
                 "iconSizeUnit" : "px",
-                "mainColor" : "#3F52DD",
-                "backgroundColor" : "#FFFFFF",
+                "mainColor" : "#6F113A",
+                "backgroundColor" : "#BC91A4",
                 "autoScale" : true,
                 "customStyle" : {
                   "enabled" : null,
@@ -904,16 +904,16 @@
             "main" : {
               "widgets" : {
                 "ee73bb66-00df-2b00-c28a-9044f11b69db" : {
-                  "sizeX" : 12,
-                  "sizeY" : 4,
-                  "row" : 0,
-                  "col" : 0
+                  "sizeX" : 10,
+                  "sizeY" : 3,
+                  "row" : 2,
+                  "col" : 1
                 },
                 "344abd4c-45ff-df7a-03e0-e1d00b131ee7" : {
-                  "sizeX" : 12,
-                  "sizeY" : 4,
-                  "row" : 0,
-                  "col" : 12
+                  "sizeX" : 10,
+                  "sizeY" : 3,
+                  "row" : 2,
+                  "col" : 13
                 }
               },
               "gridSettings" : {
