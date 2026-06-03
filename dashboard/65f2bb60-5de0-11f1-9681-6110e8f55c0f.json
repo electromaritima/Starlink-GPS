@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Receptor GPS Starlink",
+    "title" : "Electromaritima Nube",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -994,7 +994,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Receptor GPS Starlink",
+    "name" : "Electromaritima Nube",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
