@@ -434,7 +434,7 @@
                 "type" : "openDashboardState",
                 "targetDashboardStateId" : "Starlink",
                 "setEntityId" : true,
-                "stateEntityParamName" : "Starlink",
+                "stateEntityParamName" : "",
                 "openRightLayout" : false,
                 "openInSeparateDialog" : false,
                 "openInPopover" : false
