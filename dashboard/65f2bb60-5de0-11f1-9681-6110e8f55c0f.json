@@ -1,7 +1,7 @@
 {
   "entityType" : "DASHBOARD",
   "entity" : {
-    "title" : "Electromarítima - NMEA 0183 Demo",
+    "title" : "Receptor GPS Starlink",
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
@@ -994,7 +994,7 @@
         "toolbarAlwaysOpen" : true
       }
     },
-    "name" : "Electromarítima - NMEA 0183 Demo",
+    "name" : "Receptor GPS Starlink",
     "resources" : null,
     "assignedCustomers" : null,
     "externalId" : null,
