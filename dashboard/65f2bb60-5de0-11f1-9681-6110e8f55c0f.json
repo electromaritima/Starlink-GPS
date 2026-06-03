@@ -662,6 +662,194 @@
           "row" : 0,
           "col" : 0,
           "id" : "344abd4c-45ff-df7a-03e0-e1d00b131ee7"
+        },
+        "dc390944-493f-7aa3-6d7a-f345a8b028fe" : {
+          "typeFullFqn" : "system.cards.entities_table",
+          "type" : "latest",
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "entitiesTitle" : "Entities",
+              "enableSearch" : true,
+              "enableSelectColumnDisplay" : true,
+              "enableStickyHeader" : true,
+              "enableStickyAction" : true,
+              "reserveSpaceForHiddenAction" : "true",
+              "displayEntityName" : false,
+              "displayEntityLabel" : false,
+              "displayEntityType" : false,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "pageStepCount" : 3,
+              "pageStepIncrement" : 10,
+              "defaultSortOrder" : "displayName",
+              "useRowStyleFunction" : false
+            },
+            "title" : "Entities table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "device",
+              "name" : "",
+              "deviceId" : "c38e0770-2c35-11f1-b620-2ff6df252135",
+              "entityAliasId" : null,
+              "filterId" : null,
+              "dataKeys" : [ {
+                "name" : "device_name",
+                "type" : "timeseries",
+                "label" : "Nombre",
+                "color" : "#2196f3",
+                "settings" : { }
+              }, {
+                "name" : "dish_reachable",
+                "type" : "timeseries",
+                "label" : "dish_reachable",
+                "color" : "#4caf50",
+                "settings" : { },
+                "decimals" : 0
+              }, {
+                "name" : "location_raw",
+                "type" : "timeseries",
+                "label" : "location_raw",
+                "color" : "#4caf50",
+                "settings" : { },
+                "decimals" : 0
+              } ],
+              "alarmFilterConfig" : {
+                "statusList" : [ "ACTIVE" ]
+              }
+            } ],
+            "configMode" : "basic",
+            "actions" : { },
+            "showTitleIcon" : false,
+            "titleIcon" : "list",
+            "iconColor" : null,
+            "titleFont" : null,
+            "titleColor" : null
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "dc390944-493f-7aa3-6d7a-f345a8b028fe"
+        },
+        "4e5943e8-7d4d-be68-bc53-d480dc609156" : {
+          "typeFullFqn" : "system.action_button",
+          "type" : "latest",
+          "sizeX" : 3,
+          "sizeY" : 1,
+          "config" : {
+            "datasources" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#FFFFFF01",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "activatedState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "disabledState" : {
+                "action" : "DO_NOTHING",
+                "defaultValue" : false,
+                "getAttribute" : {
+                  "key" : "state",
+                  "scope" : null
+                },
+                "getTimeSeries" : {
+                  "key" : "state"
+                },
+                "getAlarmStatus" : {
+                  "severityList" : null,
+                  "typeList" : null
+                },
+                "dataToValue" : {
+                  "type" : "NONE",
+                  "compareToValue" : true,
+                  "dataToValueFunction" : "/* Should return boolean value */\nreturn data;"
+                }
+              },
+              "appearance" : {
+                "type" : "outlined",
+                "autoScale" : true,
+                "showLabel" : true,
+                "label" : "Button",
+                "showIcon" : true,
+                "icon" : "home",
+                "iconSize" : 24,
+                "iconSizeUnit" : "px",
+                "mainColor" : "#3F52DD",
+                "backgroundColor" : "#FFFFFF",
+                "customStyle" : {
+                  "enabled" : null,
+                  "hovered" : null,
+                  "pressed" : null,
+                  "activated" : null,
+                  "disabled" : null
+                }
+              }
+            },
+            "title" : "Action button",
+            "showTitleIcon" : false,
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "dropShadow" : false,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "showLegend" : false,
+            "widgetCss" : "",
+            "pageSize" : 1024,
+            "noDataDisplayMessage" : "",
+            "borderRadius" : "4px",
+            "configMode" : "basic",
+            "actions" : {
+              "click" : [ {
+                "id" : "ef820988-c429-0cfe-4381-76ad334da682",
+                "name" : "onClick",
+                "icon" : "more_horiz",
+                "type" : "openDashboardState",
+                "targetDashboardStateId" : "inicio",
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openRightLayout" : false,
+                "openInSeparateDialog" : false,
+                "openInPopover" : false
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "4e5943e8-7d4d-be68-bc53-d480dc609156"
         }
       },
       "states" : {
@@ -744,7 +932,20 @@
           "root" : false,
           "layouts" : {
             "main" : {
-              "widgets" : { },
+              "widgets" : {
+                "dc390944-493f-7aa3-6d7a-f345a8b028fe" : {
+                  "sizeX" : 24,
+                  "sizeY" : 10,
+                  "row" : 0,
+                  "col" : 0
+                },
+                "4e5943e8-7d4d-be68-bc53-d480dc609156" : {
+                  "sizeX" : 3,
+                  "sizeY" : 1,
+                  "row" : 10,
+                  "col" : 0
+                }
+              },
               "gridSettings" : {
                 "layoutType" : "default",
                 "backgroundColor" : "#eeeeee",
